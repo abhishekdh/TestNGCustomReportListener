@@ -1,0 +1,11 @@
+/target/
+/bin/
+/screenshots/
+.settings/
+/logs/
+/test-output/
+.DS_Store
+.classpath
+.project
+/downloads/
+/src/main/java/com/abhishek/emailer/
