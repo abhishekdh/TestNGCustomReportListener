@@ -23,5 +23,26 @@ Make sure you have testSiteURL in your config file.
 
 Company logo can be set on the top of the TestNGCustomReportListener:
 
+### Prerequisite Dependencies:
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.4.0</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>4.4.1</version>
+        </dependency>
+
+       
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>LATEST</version>
+        </dependency>
+
 ### Screenshot:
 <p><img src='https://github.com/abhishekdh/TestNGCustomReportListener/blob/master/doc/image/screenshot.png'></p>
