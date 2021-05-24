@@ -448,10 +448,16 @@ public class TestNGCustomReportListener implements IReporter {
                 summaryCell(q, Integer.MAX_VALUE);
                 q = getMethodSet(overview.getSkippedTests(), suite).size();
                 qty_skip += q;
-                summaryCell(q, 0, "#feff65");
+                String skipColor = "";
+                if(qty_skip > 0)
+                    skipColor = "#feff65";
+                summaryCell(q, 0, skipColor);
                 q = getMethodSet(overview.getFailedTests(), suite).size();
                 qty_fail += q;
-                summaryCell(q, 0, "#fa8072");
+                String failedColor = "";
+                if(qty_fail > 0)
+                    failedColor = "#fa8072";
+                summaryCell(q, 0, failedColor);
 
                 // Write OS and Browser
                 summaryCell(suite.getParameter("browserType"), true);
@@ -478,8 +484,16 @@ public class TestNGCustomReportListener implements IReporter {
 
             writer.println("<tr class='total'><td>Total</td>");
             summaryCell(qty_pass_m, Integer.MAX_VALUE);
-            summaryCell(qty_skip, 0);
-            summaryCell(qty_fail, 0);
+
+            String failedColor = "";
+            if(qty_fail > 0)
+                failedColor = "#fa8072";
+            String skipColor = "";
+            if(qty_skip > 0)
+                skipColor = "#feff65";
+
+            summaryCell(qty_skip, 0, skipColor);
+            summaryCell(qty_fail, 0, failedColor);
             summaryCell(" ", true);
             summaryCell(" ", true);
             summaryCell(" ", true);
@@ -593,7 +607,7 @@ public class TestNGCustomReportListener implements IReporter {
         out.println(".param th {padding-left:1em;padding-right:1em}");
         out.println(".param td {padding-left:.5em;padding-right:2em}");
         out.println(".stripe td,.stripe th {background-color: #E6EBF9}");
-        out.println(".numi,.numi_attn {text-align:right}");
+        out.println(".numi,.numi_attn {text-align:center}");
         out.println(".total td {font-weight:bold}");
         out.println(".passedodd td {background-color: #32CD32}");
         out.println(".passedeven td {background-color: #3F3}");
