@@ -34,7 +34,7 @@ import org.testng.xml.XmlSuite;
 /**
  * Created by Abhishek.
  */
-public class TestNGCustomReportListener implements IReporter {
+public class TestNGCustomReportListener2 implements IReporter {
 
     private PrintWriter writer;
     private int m_row;
@@ -693,14 +693,15 @@ public class TestNGCustomReportListener implements IReporter {
                 ITestContext tc = sr.getTestContext();
 
                 //To get Dataprovider test Count
-                passed += tc.getPassedTests().getAllResults().size();
+              /*  passed += tc.getPassedTests().getAllResults().size();
                 failed += tc.getFailedTests().getAllResults().size();
-                skipped += tc.getSkippedTests().getAllResults().size();
+                skipped += tc.getSkippedTests().getAllResults().size();*/
 
                 //To skip Dataprovider test Count
-               /* passed += tc.getPassedTests().getAllMethods().size();
+                passed += tc.getPassedTests().getAllMethods().size();
                 failed += tc.getFailedTests().getAllMethods().size();
-                skipped += tc.getSkippedTests().getAllMethods().size();*/
+                skipped += tc.getSkippedTests().getAllMethods().size();
+
 
 
                 System.out.println("Passed tests for suite '" + suiteName +
