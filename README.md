@@ -23,7 +23,7 @@
 Make sure you have testSiteURL in your config file.
 
 
-### Listener
+### Listener: Add this to TestNG.xml
 	<listeners>
 		<listener
 			class-name="com.mic.listener.TestNGCustomReportListener" />
