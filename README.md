@@ -26,7 +26,7 @@ Make sure you have testSiteURL in your config file.
 ### Listener: Add this to TestNG.xml
 	<listeners>
 		<listener
-			class-name="com.mic.listener.TestNGCustomReportListener" />
+			class-name="{your-package-name}.TestNGCustomReportListener" />
 	</listeners>
 
 Company logo can be set on the top of the TestNGCustomReportListener:
