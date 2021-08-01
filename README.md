@@ -22,6 +22,13 @@
 		baseURL = config.getProperty("testSiteURL");
 Make sure you have testSiteURL in your config file.
 
+
+### Listener
+	<listeners>
+		<listener
+			class-name="com.mic.listener.TestNGCustomReportListener" />
+	</listeners>
+
 Company logo can be set on the top of the TestNGCustomReportListener:
 
 ### Prerequisite Dependencies:
