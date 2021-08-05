@@ -460,7 +460,11 @@ public class TestNGCustomReportListener2 implements IReporter {
                 summaryCell(q, 0, failedColor);
 
                 // Write OS and Browser
-                summaryCell(suite.getParameter("browserType"), true);
+                String parameterName = overview.getCurrentXmlTest().getParameter("browserType");
+                if(parameterName.isEmpty())
+                    summaryCell(suite.getParameter("browserType"), true);
+                else
+                    summaryCell(overview.getCurrentXmlTest().getParameter("browserType"), true);
                 writer.println("</td>");
 
                 SimpleDateFormat summaryFormat = new SimpleDateFormat("hh:mm:ss");
